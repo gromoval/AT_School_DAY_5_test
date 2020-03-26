@@ -89,7 +89,6 @@ public class TestClass {
         WebElement webElement1 = webDriver.findElement(By.xpath("//button[@class='btn navbar-btn btn-default btn-sign-in']"));
         webElement1.click();
         Thread.sleep(1000);
-        String password1 = "1234qwerasdf";
         WebElement webElementLogin1 = webDriver.findElement(By.xpath("//input[@id='id_username']"));
         webElementLogin1.clear();
         webElementLogin1.click();
