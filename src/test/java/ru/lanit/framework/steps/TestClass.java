@@ -40,25 +40,25 @@ public class TestClass {
         System.out.println("Открыт браузер " + ((ChromeDriver) webDriver).getSessionId());
         webDriver.get("https://dev.n7lanit.ru/");
         WebElement webElement = webDriver.findElement(By.linkText("Категории"));
-//        webElement.click();
-//        System.out.println("Нашли и клинкули ссылку 'Категории'");
-//        Thread.sleep(1000);
-//        webElement = webDriver.findElement(By.linkText("Пользователи"));
-//        webElement.click();
-//        System.out.println("Нашли и клинкули ссылку 'Пользователи'");
-//        Thread.sleep(1000);
-//        webElement = webDriver.findElement(By.xpath("//div[@class='navbar-search dropdown']"));
-//        webElement.click();
-//        Thread.sleep(1000);
-//        webElement = webDriver.findElement(By.xpath("//*[@aria-controls='dropdown-menu dropdown-search-results']"));
-//        webElement.click();
-//        webElement.sendKeys("gromovalex");
-//        Thread.sleep(1000);
-//        webElement = webDriver.findElement(By.xpath("//*[@class='dropdown-search-user']"));
-//        webElement.click();
-//        Assert.assertTrue(webDriver.findElement(By.xpath("//abbr[@title='Присоединился 26 марта 2020 г., 11:35']")).isDisplayed(), "Присоединился");
-//        System.out.println("Нашли пользователя 'gromovalex'");
-//        Thread.sleep(1000);
+        webElement.click();
+        System.out.println("Нашли и клинкули ссылку 'Категории'");
+        Thread.sleep(1000);
+        webElement = webDriver.findElement(By.linkText("Пользователи"));
+        webElement.click();
+        System.out.println("Нашли и клинкули ссылку 'Пользователи'");
+        Thread.sleep(1000);
+        webElement = webDriver.findElement(By.xpath("//div[@class='navbar-search dropdown']"));
+        webElement.click();
+        Thread.sleep(1000);
+        webElement = webDriver.findElement(By.xpath("//*[@aria-controls='dropdown-menu dropdown-search-results']"));
+        webElement.click();
+        webElement.sendKeys("gromovalex");
+        Thread.sleep(1000);
+        webElement = webDriver.findElement(By.xpath("//*[@class='dropdown-search-user']"));
+        webElement.click();
+        Assert.assertTrue(webDriver.findElement(By.xpath("//abbr[@title='Присоединился 26 марта 2020 г., 11:35']")).isDisplayed(), "Присоединился");
+        System.out.println("Нашли пользователя 'gromovalex'");
+        Thread.sleep(1000);
 
 //        доп задание
 
