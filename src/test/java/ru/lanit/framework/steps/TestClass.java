@@ -21,7 +21,7 @@ public class TestClass {
 
     @BeforeClass
     private void checkAuth() {
-//        loginPasswordData.put("gromovalex", "1234qwerasdf"); будем проверять только невалидное. валид потом отдельно проверим
+        loginPasswordData.put("gromovalex", "1234qwerasdf"); // будем проверять только невалидное. валид потом отдельно проверим
         loginPasswordData.put("sdfkjhyfejrhsdfksdfh", "sdjfhksdjfhksdjfhyrgberjhbdf");
         loginPasswordData.put("admin", "простокакойтопароль");
         loginPasswordData.put("" , "");
@@ -40,25 +40,25 @@ public class TestClass {
         System.out.println("Открыт браузер " + ((ChromeDriver) webDriver).getSessionId());
         webDriver.get("https://dev.n7lanit.ru/");
         WebElement webElement = webDriver.findElement(By.linkText("Категории"));
-        webElement.click();
-        System.out.println("Нашли и клинкули ссылку 'Категории'");
-        Thread.sleep(1000);
-        webElement = webDriver.findElement(By.linkText("Пользователи"));
-        webElement.click();
-        System.out.println("Нашли и клинкули ссылку 'Пользователи'");
-        Thread.sleep(1000);
-        webElement = webDriver.findElement(By.xpath("//div[@class='navbar-search dropdown']"));
-        webElement.click();
-        Thread.sleep(1000);
-        webElement = webDriver.findElement(By.xpath("//*[@aria-controls='dropdown-menu dropdown-search-results']"));
-        webElement.click();
-        webElement.sendKeys("gromovalex");
-        Thread.sleep(1000);
-        webElement = webDriver.findElement(By.xpath("//*[@class='dropdown-search-user']"));
-        webElement.click();
-        Assert.assertTrue(webDriver.findElement(By.xpath("//abbr[@title='Присоединился 26 марта 2020 г., 11:35']")).isDisplayed(), "Присоединился");
-        System.out.println("Нашли пользователя 'gromovalex'");
-        Thread.sleep(1000);
+//        webElement.click();
+//        System.out.println("Нашли и клинкули ссылку 'Категории'");
+//        Thread.sleep(1000);
+//        webElement = webDriver.findElement(By.linkText("Пользователи"));
+//        webElement.click();
+//        System.out.println("Нашли и клинкули ссылку 'Пользователи'");
+//        Thread.sleep(1000);
+//        webElement = webDriver.findElement(By.xpath("//div[@class='navbar-search dropdown']"));
+//        webElement.click();
+//        Thread.sleep(1000);
+//        webElement = webDriver.findElement(By.xpath("//*[@aria-controls='dropdown-menu dropdown-search-results']"));
+//        webElement.click();
+//        webElement.sendKeys("gromovalex");
+//        Thread.sleep(1000);
+//        webElement = webDriver.findElement(By.xpath("//*[@class='dropdown-search-user']"));
+//        webElement.click();
+//        Assert.assertTrue(webDriver.findElement(By.xpath("//abbr[@title='Присоединился 26 марта 2020 г., 11:35']")).isDisplayed(), "Присоединился");
+//        System.out.println("Нашли пользователя 'gromovalex'");
+//        Thread.sleep(1000);
 
 //        доп задание
 
@@ -83,25 +83,27 @@ public class TestClass {
                 Thread.sleep(4000); // закрывает кнопку красная надпись, попасть по элементу не может если меньше сделать. так она сама пропадет
                 webElementLogin = webDriver.findElement(By.xpath("//button[@class='close' and @aria-label='Закрыть']"));
                 webElementLogin.click();
+            } else {
+                System.out.println("Пользователь авторизован! Проверка пройдена!");
             }
         }
 
-        WebElement webElement1 = webDriver.findElement(By.xpath("//button[@class='btn navbar-btn btn-default btn-sign-in']"));
-        webElement1.click();
-        Thread.sleep(1000);
-        WebElement webElementLogin1 = webDriver.findElement(By.xpath("//input[@id='id_username']"));
-        webElementLogin1.clear();
-        webElementLogin1.click();
-        webElementLogin1.sendKeys("gromovalex");
-        WebElement webElementPassword1 = webDriver.findElement(By.xpath("//input[@id='id_password']"));
-        webElementPassword1.clear();
-        webElementPassword1.click();
-        webElementPassword1.sendKeys("1234qwerasdf");
-        webElementLogin1.sendKeys(Keys.ENTER);
-        Thread.sleep(1000);
-        Assert.assertTrue(webDriver.findElement(By.xpath("//a[@class='dropdown-toggle' and @data-toggle='dropdown']")).isDisplayed());
-        System.out.println("Пользователь авторизован! Тест пройден успешно");
-        webDriver.quit();
+//        WebElement webElement1 = webDriver.findElement(By.xpath("//button[@class='btn navbar-btn btn-default btn-sign-in']"));
+//        webElement1.click();
+//        Thread.sleep(1000);
+//        WebElement webElementLogin1 = webDriver.findElement(By.xpath("//input[@id='id_username']"));
+//        webElementLogin1.clear();
+//        webElementLogin1.click();
+//        webElementLogin1.sendKeys("gromovalex");
+//        WebElement webElementPassword1 = webDriver.findElement(By.xpath("//input[@id='id_password']"));
+//        webElementPassword1.clear();
+//        webElementPassword1.click();
+//        webElementPassword1.sendKeys("1234qwerasdf");
+//        webElementLogin1.sendKeys(Keys.ENTER);
+//        Thread.sleep(1000);
+//        Assert.assertTrue(webDriver.findElement(By.xpath("//a[@class='dropdown-toggle' and @data-toggle='dropdown']")).isDisplayed());
+//        System.out.println("Пользователь авторизован! Тест пройден успешно");
+//        webDriver.quit();
 
     }
 }
